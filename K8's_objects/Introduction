@@ -1,0 +1,36 @@
+Kubernetes is an open-source container orchestration tool that is used to automate tasks such as the management, monitoring, scaling, and deployment of containerized applications. 
+
+Why Kubernetes?
+
+High Availability: Kubernetes supports high availability by automatically distributing containers across multiple nodes (servers). If a node fails, Kubernetes can reschedule containers on healthy nodes, minimizing downtime.
+
+Self-Healing: Kubernetes continuously monitors the health of containers and nodes. If a container or node becomes unhealthy, Kubernetes can automatically restart containers, replace failed nodes, or perform other remedial actions to maintain the desired state.
+
+Declarative Configuration: Kubernetes uses declarative YAML or JSON configuration files to define the desired state of your application. You specify how your application should run, its resources, dependencies, and networking rules. Kubernetes then works to ensure that the actual state matches the desired state.
+
+Service Discovery and Load Balancing: Kubernetes provides built-in service discovery and load balancing mechanisms. It assigns a stable IP address and DNS name to each service, allowing other services to discover and communicate with them. Load balancing ensures that incoming traffic is distributed evenly across instances of a service.
+
+Portability and Flexibility: Kubernetes is platform-agnostic and can run on various infrastructure environments, including public clouds, private clouds, on-premises data centers, and hybrid environments. This portability makes it easier to deploy and manage applications across different environments without significant changes.
+
+Enterprise support: Kubernetes is highly extensible and supports a wide range of plugins, extensions, and third-party tools. You can integrate Kubernetes with monitoring systems, logging frameworks, CI/CD pipelines, and other DevOps tools to build a comprehensive deployment and management ecosystem.
+
+Kubernetes components/architecture:
+
+It has a control plane and dataplane in which control plane is also called as master node and dataplane is called as a worker node.Ideally one master node is enough and we can have more worker nodes,if master node goes down all the worker nodes will not work
+control plane components:
+Kube api-server: K8s API is the frontend of the kubernetes control plane and is how users interact with K8s cluster. It determines if a request is valid or not and then process it
+Kube scheduler: It schedules the pods on the wroker nodes based on the resource availability
+kube controller-manager: It is the non-terminating loop that regulates the state of the system
+etcd:  etcd is a key-value store used to manage the critical information like configuration data, state data, and metadata for Kubernetes
+Data plane components:
+Kubelet: The kubelet is the primary "node agent" that runs on each node. Itfacilitates communication between the control plane and data planes, allowing for the effective deployment and execution of containerized applications
+kubeproxy: It is the network proxy which maintains the network rules on nodes
+container runtime: It is responsible for managing the execution and lifecycle of the containers within the Kubernetes environment.  (POD)
+
+
+
+
+
+  
+
+
